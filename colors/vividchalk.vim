@@ -159,14 +159,14 @@ call s:hifg("Comment"        ,"#4d4d4d","Grey",34) " 92
 " 26 instead?
 call s:hifg("Constant"       ,"#6A89B5","DarkCyan",21) " 30
 call s:hifg("rubyNumber"     ,"#CCFF33","Yellow",60) " 190
-call s:hifg("String"         ,"#66FF00","LightGreen",44,82) " 82
+call s:hifg("String"         ,"#66CC33","LightGreen",44,82) " 82
 call s:hifg("Identifier"     ,"#FFCC00","Yellow",72) " 220
 call s:hifg("Statement"      ,"#FF6600","Brown",68) " 202
 call s:hifg("PreProc"        ,"#AAFFFF","LightCyan",47) " 213
-call s:hifg("railsUserMethod","#AACCFF","LightCyan",27)
+call s:hifg("railsUserMethod","#FFFFFF","LightCyan",27)
 call s:hifg("Type"           ,"#6A89B5","Grey",57) " 101
 call s:hifg("railsUserClass" ,"#AAAAAA","Grey",7) " 101
-call s:hifg("Special"        ,"#33AA00","DarkGreen",24) " 7
+call s:hifg("Special"        ,"#66CC33","DarkGreen",24) " 7
 call s:hifg("Regexp"         ,"#44B4CC","DarkCyan",21) " 74
-call s:hifg("rubyMethod"     ,"#DDE93D","Yellow",77) " 191
+call s:hifg("rubyMethod"     ,"#FFCC33","Yellow",77) " 191
 "highlight railsMethod   guifg=#EE1122 ctermfg=1

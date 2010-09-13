@@ -1,0 +1,42 @@
+= My Vim Config 
+This is my current Vim setup that I use with MacVim. You should be able to use this with GVim as well (on Windows) - making sure to update your vimrc file accordingly.
+
+= Credits
+This is based of the scrooloose repo, minus some menu settings and so on.
+
+== Installation
+The simplest thing you can do is to create a "VimSettings" directory somewhere on your drive. Mines in my home root (~/). Just do a git clone from this repo and put it to your drive somewhere, then you need to setup some aliases to point to the vimrc and gvimrc files.
+
+By default, Vim will look for these files in your root, so you'll need to alias them like this:
+	ln -s ~/VimSettings/vimrc .vimrc 
+	ln -s ~/VimSettings/gvimrc .gvimrc 
+
+== Submodules
+The code snippets are in git submodules - run this to sync them up:
+  git submodule init
+  git submodule update
+
+== Installation: Windows
+If you've installed GVim you have a directory in Program Files (if you're on 64 bit, this is Program Files (x86)) called "Vim". Inside there is where you'll want to put all these files.
+
+ # Clone this repository somewhere on your hard drive. 
+ # Make a back of your Vim directory. 
+ # Drop "vimrc" from the download into the Vim directory, replacing what's there
+ # Double-click the Inconsolata font to install it (if you want it, that is)
+ # Open up vimfiles directory and remove everything
+ # copy/paste the directories inside the downloaded vim-settings directory
+ # If you have a color scheme you liked using - copy that back from your old vimfiles directory (which hopefully you saved)
+
+=== If you get an error about Ctags...
+This happens a lot and it's not a biggie. Just go here:
+http://sourceforge.net/projects/ctags/files/ctags/5.8/ctags58.zip/download
+
+And get the ctags download. This is a tool that parses your code and allows to do some tagging "stuff". It's core to Vim and a lot of plugins. In the Windows download you'll see all the source files. You only need one: ctags.exe. Take that and drop it in your C:\Windows directory (or somewhere in your PATH) and restart Vim - all fixed.
+
+The plugins I use are managed through "Pathogen" - a plugin bundler that makes thing pretty simple. If you ever want to install a new plugin in the future, just drop it into the "bundle" directory and you're good to go.
+
+
+== Colors
+I've redone the VividChalk theme as I think it was way too Miami Vice. I've toned down the colors to be a bit more true to VibrantInk (as well as borrowing from Blackboard).
+
+I've also included Inconsolata - my favorite programming font. If you're on Windows you can use Consolas - the setting for the font is in gvimrc (size, etc)
