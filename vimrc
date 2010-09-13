@@ -20,6 +20,10 @@ set linebreak   "wrap lines at convenient points
 "statusline setup
 set statusline=%f       "tail of the filename
 
+"line numbers
+set number
+set pastetoggle=<F2>
+
 "display a warning if fileformat isnt unix
 set statusline+=%#warningmsg#
 set statusline+=%{&ff!='unix'?'['.&ff.']':''}

@@ -1,0 +1,4 @@
+def destroy
+	@${1:model_class_name} = ${2:ModelClassName}.find(params[:id])
+	@$1.destroy
+end${3}
