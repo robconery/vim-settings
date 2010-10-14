@@ -7,7 +7,7 @@ set backspace=indent,eol,start
 
 "store lots of :cmdline history
 set history=1000
-colorscheme vividchalk
+colorscheme grb3
 set showcmd     "show incomplete cmds down the bottom
 set showmode    "show current mode down the bottom
 
@@ -22,7 +22,7 @@ set statusline=%f       "tail of the filename
 
 "line numbers
 set number
-set pastetoggle=<F2>
+set pastetoggle=<F5>
 
 "display a warning if fileformat isnt unix
 set statusline+=%#warningmsg#
@@ -172,8 +172,8 @@ function! s:Median(nums)
 endfunction
 
 "indent settings
-set shiftwidth=4
-set softtabstop=4
+set shiftwidth=2
+set softtabstop=2
 set expandtab
 set autoindent
 
@@ -186,9 +186,6 @@ set wildmode=list:longest   "make cmdline tab completion similar to bash
 set wildmenu                "enable ctrl-n and ctrl-p to scroll thru matches
 set wildignore=*.o,*.obj,*~ "stuff to ignore when tab completing
 
-"display tabs and trailing spaces
-set list
-set listchars=tab:▷⋅,trail:⋅,nbsp:⋅
 
 set formatoptions-=o "dont continue comments when pushing o/O
 
