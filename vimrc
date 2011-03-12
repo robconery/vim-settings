@@ -7,7 +7,7 @@ set backspace=indent,eol,start
 
 "store lots of :cmdline history
 set history=1000
-colorscheme grb3
+colorscheme obsidian2
 set showcmd     "show incomplete cmds down the bottom
 set showmode    "show current mode down the bottom
 
@@ -19,6 +19,17 @@ set linebreak   "wrap lines at convenient points
 
 "statusline setup
 set statusline=%f       "tail of the filename
+
+let g:speckyBannerKey = "<C-S>b"
+let g:speckyQuoteSwitcherKey = "<C-S>'"
+let g:speckyRunRdocKey = "<C-S>r"
+let g:speckySpecSwitcherKey = "<C-S>x"
+let g:speckyRunSpecKey = "<Leader>s"
+let g:speckyRunSpecCmd = "/Users/rob/.rvm/gems/ruby-1.9.2-p0@tekpub3r/bin/rspec -fs"
+let g:speckyRunRdocCmd = "fri -L -f plain"
+let g:speckyWindowType = 2
+
+
 
 "line numbers
 set number
@@ -204,7 +215,7 @@ syntax on
 "some stuff to get the mouse going in term
 set mouse=a
 set ttymouse=xterm2
-
+ 
 "tell the term has 256 colors
 set t_Co=256
 

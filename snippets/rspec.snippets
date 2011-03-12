@@ -1,0 +1,168 @@
+#
+# specky: snippet file for rspec, to be used with the quite excellent
+# 'snipmate' Vim plugin by Michael Sanders <msanders42+vim@gmail.com>.
+# http://www.vim.org/scripts/script.php?script_id=2540
+#
+# $Id: rspec.snippets 70 2009-06-01 14:33:54Z mahlon $
+#
+
+snippet .and and_raise()
+	.and_raise( ${1:exception}.new("${2:message}") )
+snippet .and and_return { }
+	.and_return { ${1} }
+snippet .and and_return()
+	.and_return( ${1:value} )
+snippet .and and_throw()
+	.and_throw( ${1:sym} )
+snippet .and and_yield()
+	.and_yield( ${1:values} )
+snippet .at at_least()
+	.at_least( ${1:n} ).times
+snippet .at at_most()
+	.at_most( ${1:n} ).times
+snippet .on
+	.once
+snippet .tw
+	.twice
+snippet .any
+	.any_number_of_times
+snippet des Describe subject
+	describe "${1:subject}" do
+		${2}
+	end
+snippet des Describe Type
+	describe ${1:Type} do
+		${2}
+	end
+snippet des Describe Type, description
+	describe ${1:Type}, "${2:description}" do
+		${3}
+	end
+snippet des Describe a shared group
+	describe "${1:A Shared Thing}", :shared => true do
+		${2}
+	end
+snippet it it block
+	it "${1:should do something}" do
+		${2}
+	end
+snippet it it (pending)
+	it "${1:does something}"${2}
+snippet .ex
+	.exactly( ${1:n} ).times
+snippet .w
+	.with( ${1:args} )${2}
+snippet con
+	context "${1:context}" do
+		${2}
+	end
+snippet mock
+	${1:var} = mock( "${2:mock_name}"${3:, :null_object => true} )
+	${4}
+snippet st
+	stub!( :${1:expectation} ).with( ${2:args} ).and_return( ${3} )
+snippet bef Before each test
+	before( :each ) do
+		${1}
+	end
+snippet bef Before all tests
+	before( :all ) do
+		${1}
+	end
+snippet aft After each test
+	after( :each ) do
+		${1}
+	end
+snippet aft After all tests
+	after( :all ) do
+		${1}
+	end
+snippet sh=
+	${1:target}.should == ${2:value}
+	${3}
+snippet shn=
+	${1:target}.should_not == ${2:value}
+	${3}
+snippet she
+	${1:target}.should equal( ${2:value} )
+	${3}
+snippet shne
+	${1:target}.should_not equal( ${2:value} )
+	${3}
+snippet shm Should contain
+	${1:target}.should =~ /${2:regexp}/
+	${3}
+snippet shnm 
+	${1:target}.should_not =~ /${2:regexp}/
+	${3}
+snippet shm Should match
+	${1:target}.should match( /${2:regexp}/ )${3}
+snippet shb
+	${1:target}.should be( ${2:result} )
+	${3}
+snippet shnb
+	${1:target}.should_not be( ${2:result} )
+	${3}
+snippet shbko
+	${1:target}.should be_a_kind_of( ${2:klass} )
+	${3}
+snippet shnbko
+	${1:target}.should_not be_a_kind_of( ${2:klass} )
+	${3}
+snippet shbio
+	${1:target}.should be_instance_of( ${2:klass} )
+	${3}
+snippet shnbio
+	${1:target}.should_not be_instance_of( ${2:klass} )
+	${3}
+snippet shbc
+	${1:target}.should be_close( ${2:result}, ${3:tolerance} )
+	${4}
+snippet shnbc
+	${1:target}.should_not be_close( ${2:result}, ${3:tolerance} )
+	${4}
+snippet shh
+	${1:target}.should have( ${2:num} ).${3:things}
+	${4}
+snippet shhal
+	${1:target}.should have_at_least( ${2:num} ).${3:things}
+	${4}
+snippet shham
+	${1:target}.should have_at_most( ${2:num} ).${3:things}
+	${4}
+snippet shbp
+	${1:target}.should ${2:be_${3:predicate}} ${4}
+snippet shnbp
+	${1:target}.should_not ${2:be_${3:predicate}} ${4}
+snippet exre
+	expect { ${1} }.to raise_error( ${2:ErrorClass}, /${3:message match}/i )
+	${4}
+snippet exnre
+	expect { ${1} }.to_not raise_error( ${2:ErrorClass} )
+	${3}
+snippet shre
+	lambda { ${1} }.should raise_error( ${2:ErrorClass}, /${3:message match}/i )
+	${4}
+snippet shnre
+	lambda { ${1} }.should_not raise_error( ${2:ErrorClass} )
+	${3}
+snippet shr
+	${1:mock}.should_receive( :${2:message} )${3}
+snippet shnr
+	${1:mock}.should_not_receive( :${2:message} )${3}
+snippet shrt
+	${1:target}.should respond_to( :${2:sym} )
+snippet shnrt
+	${1:target}.should_not respond_to( :${2:sym} )
+snippet shbl
+	it_should_behave_like "${1:shared behavior}"
+	${2}
+snippet sim
+	def ${1:matcher_method}( expected )
+		simple_matcher do |given, matcher|
+			matcher.description = "${2:verb} with #{expected.inspect}"
+			matcher.failure_message = "expected #{given.inspect} to $2 with #{expected.inspect}"
+			matcher.negative_failure_message = "expected #{given.inspect} not to $2 with #{expected.inspect}"
+			given.${3:...checks something and returns a boolean}
+		end
+	end
