@@ -1,9 +1,16 @@
+
+
 "Use Vim settings, rather then Vi settings (much better!).
 "This must be first, because it changes other options as a side effect.
 set nocompatible
 
 "allow backspacing over everything in insert mode
 set backspace=indent,eol,start
+
+"Map NERDTree to \p
+nmap <silent> <Leader>p :NERDTreeToggle<CR>
+
+call pathogen#infect()
 
 "store lots of :cmdline history
 set history=1000
@@ -25,7 +32,7 @@ let g:speckyQuoteSwitcherKey = "<C-S>'"
 let g:speckyRunRdocKey = "<C-S>r"
 let g:speckySpecSwitcherKey = "<C-S>x"
 let g:speckyRunSpecKey = "<Leader>s"
-let g:speckyRunSpecCmd = "/Users/rob/.rvm/gems/ruby-1.9.2-p0@tekpub3r/bin/rspec -fs"
+let g:speckyRunSpecCmd = "/Users/rob/.rvm/gems/ruby-1.9.2-p2900@tekpub3r/bin/rspec -fs"
 let g:speckyRunRdocCmd = "fri -L -f plain"
 let g:speckyWindowType = 2
 
