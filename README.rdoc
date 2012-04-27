@@ -8,8 +8,8 @@ This is based of the scrooloose repo, minus some menu settings and so on.
 The simplest thing you can do is to create a "VimSettings" directory somewhere on your drive. Mines in my home root (~/). Just do a git clone from this repo and put it to your drive somewhere, then you need to setup some aliases to point to the vimrc and gvimrc files.
 
 By default, Vim will look for these files in your root, so you'll need to alias them like this:
-	ln -s ~/VimSettings/vimrc .vimrc 
-	ln -s ~/VimSettings/gvimrc .gvimrc 
+  ln -s ~/VimSettings/vimrc .vimrc 
+  ln -s ~/VimSettings/gvimrc .gvimrc 
 
 == Submodules
 The code snippets are in git submodules - run this to sync them up:
