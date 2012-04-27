@@ -10,6 +10,7 @@ The simplest thing you can do is to create a "VimSettings" directory somewhere o
 By default, Vim will look for these files in your root, so you'll need to alias them like this:
   ln -s ~/VimSettings/vimrc .vimrc 
   ln -s ~/VimSettings/gvimrc .gvimrc 
+  ln -s ~/VimSettings .vim
 
 == Submodules
 The code snippets are in git submodules - run this to sync them up:
