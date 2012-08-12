@@ -9,12 +9,16 @@ set backspace=indent,eol,start
 
 "Map NERDTree to \p
 nmap <silent> <Leader>p :NERDTreeToggle<CR>
+map <leader>t :FufFile<CR>
 
 call pathogen#infect()
+call pathogen#helptags()
+set guifont=Monaco:h16.00
+set background=dark
+colorscheme solarized
 
 "store lots of :cmdline history
 set history=1000
-colorscheme obsidian2
 set showcmd     "show incomplete cmds down the bottom
 set showmode    "show current mode down the bottom
 
@@ -26,17 +30,6 @@ set linebreak   "wrap lines at convenient points
 
 "statusline setup
 set statusline=%f       "tail of the filename
-
-let g:speckyBannerKey = "<C-S>b"
-let g:speckyQuoteSwitcherKey = "<C-S>'"
-let g:speckyRunRdocKey = "<C-S>r"
-let g:speckySpecSwitcherKey = "<C-S>x"
-let g:speckyRunSpecKey = "<Leader>s"
-let g:speckyRunSpecCmd = "/Users/rob/.rvm/gems/ruby-1.9.2-p2900@tekpub3r/bin/rspec -fs"
-let g:speckyRunRdocCmd = "fri -L -f plain"
-let g:speckyWindowType = 2
-
-
 
 "line numbers
 set number
