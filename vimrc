@@ -8,14 +8,16 @@ set nocompatible
 set backspace=indent,eol,start
 
 "Map NERDTree to \p
-nmap <silent> <Leader>p :NERDTreeToggle<CR>
-map <leader>t :FufFile<CR>
+nmap <silent> <Leader>t :NERDTreeToggle<CR>
+"map <leader>t :CommandT<CR>
+vmap <S-Tab> << gv
+vmap <Tab> >> gv
 
 call pathogen#infect()
 call pathogen#helptags()
 set guifont=Monaco:h16.00
 set background=dark
-colorscheme solarized
+colorscheme twilight
 
 "store lots of :cmdline history
 set history=1000
